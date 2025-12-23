@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #4285F4 0%, #34A853 100%);
+  color: white;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.app-header::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: white;
+  border-radius: 20px 20px 0 0;
+}
+
+.app-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.app-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.app-main {
+  padding: 40px;
+}
+
+.form-section {
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  color: #4285F4;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.pass-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.pass-preview-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.wallet-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.wallet-instructions {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #34A853;
+}
+
+.wallet-instructions h4 {
+  color: #34A853;
+  margin-bottom: 15px;
+}
+
+.wallet-instructions ol {
+  padding-left: 20px;
+}
+
+.wallet-instructions li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.benefits-section {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 2px solid #e9ecef;
+}
+
+.benefits-section h3 {
+  text-align: center;
+  color: #4285F4;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.benefit-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9ecef;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.benefit-card h4 {
+  color: #4285F4;
+  margin-bottom: 10px;
+}
+
+.benefit-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.verification-failed {
+  text-align: center;
+  padding: 40px;
+  background: #fff3f3;
+  border-radius: 12px;
+  border: 2px solid #ffcccc;
+  margin-top: 40px;
+}
+
+.verification-failed h3 {
+  color: #dc3545;
+  margin-bottom: 15px;
+}
+
+.try-again-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #4285F4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.try-again-btn:hover {
+  background: #3367d6;
+}
+
+.app-footer {
+  background: #1a1a1a;
+  color: white;
+  padding: 40px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.disclaimer {
+  color: #999;
+  font-size: 0.9rem;
+  margin: 15px 0;
+  max-width: 600px;
+  margin: 15px auto;
+}
+
+.compliance-badges {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: #34A853;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .pass-section {
+    grid-template-columns: 1fr;
+  }
+
+  .app-header {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .app-main {
+    padding: 20px;
+  }
+}

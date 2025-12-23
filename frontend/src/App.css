@@ -1,0 +1,367 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* App specific layout & controls */
+:root {
+  --bg-gradient-start: #eff6ff;
+  --bg-gradient-end: #eef2ff;
+  --card-bg: #ffffff;
+  --muted: #6b7280;
+  --accent-indigo: #4f46e5;
+  --accent-indigo-dark: #4338ca;
+  --accent-green: #16a34a;
+  --accent-green-dark: #15803d;
+  --btn-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bg-white {
+  background: var(--card-bg);
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.shadow-xl {
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.sm\:p-8 {
+  padding: 2rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+/* Buttons - general styling to look authentic */
+button {
+  -webkit-appearance: none;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: transform .05s ease, box-shadow .12s ease, background-color .12s ease;
+  box-shadow: var(--btn-shadow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Primary (indigo) */
+.bg-indigo-600,
+button.bg-indigo-600 {
+  background-color: var(--accent-indigo);
+  color: white;
+}
+
+.bg-indigo-600:hover {
+  background-color: var(--accent-indigo-dark);
+}
+
+/* Secondary (green) */
+.bg-green-600,
+button.bg-green-600 {
+  background-color: var(--accent-green);
+  color: white;
+}
+
+.bg-green-600:hover {
+  background-color: var(--accent-green-dark);
+}
+
+/* Gray buttons */
+.bg-gray-600,
+button.bg-gray-600 {
+  background: #374151;
+  color: white;
+}
+
+.bg-gray-600:hover {
+  filter: brightness(.95);
+}
+
+/* Input and textarea styling */
+input[type="number"],
+textarea,
+.font-mono {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #e6e9ef;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  font-size: 0.95rem;
+  color: #0f172a;
+  box-shadow: inset 0 1px 0 rgba(16, 24, 40, 0.02);
+}
+
+textarea {
+  min-height: 4.5rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-indigo);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.06);
+}
+
+.p-4.bg-blue-50 {
+  background: #eff6ff;
+}
+
+.border {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.border-gray-300 {
+  border-color: #d1d5db;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Courier New', monospace;
+}
+
+.break-all {
+  word-break: break-all;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+/* small utility icons spacing */
+.w-5 {
+  width: 1.25rem;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+/* QR image styling */
+img[alt="QR Code"] {
+  border-radius: 0.5rem;
+  background: #fff;
+  padding: 8px;
+}
+
+/* subtle helpers */
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Spacing utilities used in JSX */
+.space-y-6>*+* {
+  margin-top: 1.5rem;
+}
+
+.space-y-4>*+* {
+  margin-top: 1rem;
+}
+
+.space-y-2>*+* {
+  margin-top: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+/* Width/height utilities for QR and icons */
+.w-64 {
+  width: 16rem;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+/* Settings control (top-right) */
+.settings-container {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 60;
+}
+
+.settings-btn {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.settings-btn:hover {
+  transform: translateY(-1px);
+}
+
+.settings-panel {
+  margin-top: 0.5rem;
+  background: white;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+  min-width: 180px;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+}
+
+.settings-panel input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
